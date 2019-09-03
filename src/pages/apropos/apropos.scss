@@ -1,0 +1,28 @@
+page-apropos {
+
+    .titre{
+        color: #028fcc;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        z-index: 10;
+      }
+      .titre1{
+        font-weight: 600;
+          color: hsl(0, 0%, 100%);
+          font-size: 14px;
+          text-align: center;
+          line-height: 31px;
+          margin-top: 150px;
+          background-color: rgba(2, 143, 204, 0.5);
+      }
+      .titre2{
+        font-weight: 600;
+          color: hsl(0, 0%, 100%);
+          font-size: 14px;
+          text-align: center;
+          line-height: 31px;
+          margin-top: 14px;
+          background-color: rgba(2, 143, 204, 0.5);
+      }
+}

@@ -1,0 +1,182 @@
+<!--
+  Generated template for the DetailcontratPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-buttons left>
+        <button ion-button icon-only menuToggle="left">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+     
+      
+    <ion-content>
+        
+      </ion-content>
+  </ion-navbar>
+  </ion-header>
+
+  <ion-content padding class="scroll-content">
+   
+  
+    <ion-item>
+        <ion-label color="primary" stacked >  Nom </ion-label>
+        <ion-input  type="text"placeholder="Changer votre nom" id="user" ></ion-input>
+        <button  color="primary"ion-button outline item-end icon-left clear (click)="alertModifier()">
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </ion-item>
+       <br>
+      <ion-item>
+          <ion-label color="primary" stacked >  Prénom</ion-label>
+          <ion-input type="text"placeholder="Changer votre prenom"></ion-input>
+          <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierprenom()">
+            <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-item> 
+        <br>
+        <ion-item>
+            <ion-label color="primary" stacked >  Email</ion-label>
+            <ion-input type="emeil"placeholder="Changer votre e-mail"></ion-input>
+          
+            <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierEmail()">
+              <ion-icon name="create"></ion-icon>
+            </button>
+          </ion-item> 
+          <br>
+          <ion-item>
+              <ion-label color="primary" stacked >  Login</ion-label>
+              <ion-input type="text"placeholder="Changer votre login"></ion-input>
+           
+              <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierLogin()">
+                <ion-icon name="create"></ion-icon>
+              </button>
+            </ion-item> 
+            <br>
+            <ion-item>
+                <ion-label color="primary" stacked >Mot de passe</ion-label>
+                <ion-input type="password"placeholder="Changer votre mot de passe"></ion-input>
+              
+                <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierMotdepasse()">
+                  <ion-icon name="create"></ion-icon>
+                </button>
+              </ion-item> 
+              <br>
+              <ion-item>
+                  <ion-label color="primary" stacked >Adresse</ion-label>
+                  <ion-input type="text"placeholder="Changer votre Adresse"></ion-input>
+                
+                  <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierAdresse()">
+                    <ion-icon name="create"></ion-icon>
+                  </button>
+                </ion-item> 
+                <br>
+                <ion-item>
+                    <ion-label color="primary" stacked > Télèphone</ion-label>
+                    <ion-input type="text"placeholder="Changer votre télèphone"></ion-input>
+                  
+                    <button color="primary"ion-button outline item-end icon-left clear (click)=" alertModifierTelephone()">
+                      <ion-icon name="create"></ion-icon>
+                    </button>
+                  </ion-item> 
+                  <br>
+                  <ion-item>
+                      <ion-label color="primary" stacked > Fax</ion-label>
+                      <ion-input type="text"placeholder="Changer votre Fax"></ion-input>
+                   
+                      <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierTelfixe()">
+                        <ion-icon name="create"></ion-icon>
+                      </button>
+                    </ion-item> 
+                    <br>
+                    <ion-item>
+                        <ion-label color="primary" stacked >Prefixe Cas </ion-label>
+                        <ion-input type="text"placeholder="Changer votre préfixe cas"></ion-input>
+                      
+                        <button  color="primary" ion-button outline item-end icon-left clear (click)="alertModifierPrefixeCas()">
+                          <ion-icon name="create"></ion-icon>
+                        </button>
+                      </ion-item> 
+                      <br>
+                      <ion-item>
+                          <ion-label color="primary" stacked >  Prefixe Contrat </ion-label>
+                          <ion-input type="text"placeholder="Changer votre préfixe contrat"></ion-input>
+                        
+                          <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierPrefixeContrat()">
+                            <ion-icon name="create"></ion-icon>
+                          </button>
+                        </ion-item> 
+                        <br>
+                        <ion-item>
+                            <ion-label color="primary" stacked >   Prefixe Consultation </ion-label>
+                            <ion-input type="text"placeholder="Changer votre préfixe consultation"></ion-input>
+                          
+                            <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierPrefixeConsultation()">
+                              <ion-icon name="create"></ion-icon>
+                            </button>
+                          </ion-item> 
+                          <br>
+                          <ion-item>
+                              <ion-label color="primary" stacked >  CodeTVA </ion-label>
+                              <ion-input type="text"placeholder="Changer votre CodeTVA"></ion-input>
+                            
+                              <button color="primary" ion-button outline item-end icon-left clear  (click)="alertModifierCodeTVA()">
+                                <ion-icon name="create"></ion-icon>
+                              </button>
+                            </ion-item> 
+                            <br>
+                            <ion-item>
+                                <ion-label color="primary" stacked >  Registre de commerce </ion-label>
+                                <ion-input type="text"placeholder="Changer votre Registre de commerce"></ion-input>
+                              
+                                <button color="primary" ion-button outline item-end icon-left clear (click)=" alertModifierRegistredecommerce()">
+                                  <ion-icon name="create"></ion-icon>
+                                </button>
+                              </ion-item> 
+                              <br>
+                              <ion-item>
+                                  <ion-label color="primary" stacked >  TauxTVA </ion-label>
+                                  <ion-input type="text"placeholder="Changer votre TauxTVA"></ion-input>
+                                
+                                  <button color="primary"ion-button outline item-end icon-left clear (click)="alertModifierTauxTVA()">
+                                    <ion-icon name="create"></ion-icon>
+                                  </button>
+                                </ion-item> 
+                                <br>
+                                <ion-item>
+                                    <ion-label color="primary" stacked >  Prefixe User </ion-label>
+                                    <ion-input type="text"placeholder="Changer votre prefixe d'utilisateur"></ion-input>
+                                 
+                                    <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierPrefixeUser()">
+                                      <ion-icon name="create"></ion-icon>
+                                    </button>
+                                  </ion-item> 
+                                  <br>
+                                  <ion-item>
+                                      <ion-label color="primary" stacked >  Templete Email Ajout </ion-label>
+                                      <ion-input type="text"placeholder="Changer votre templete email ajout"></ion-input>
+                                    
+                                      <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierTempleteEmailAjout()">
+                                        <ion-icon name="create"></ion-icon>
+                                      </button>
+                                    </ion-item> 
+                                    <br>
+                                    <ion-item>
+                                        <ion-label color="primary" stacked >  Templete Email Edit </ion-label>
+                                        <ion-input type="text"placeholder="Changer votre templete email edit"></ion-input>
+                                      
+                                        <button color="primary" ion-button outline item-end icon-left clear (click)="alertModifierTempleteEmailEdit()">
+                                          <ion-icon name="create"></ion-icon>
+                                        </button>
+                                      </ion-item>  
+
+                                    
+                                    <button ion-button color="primary"  full (click)="listeFecture()">Liste factures</button>
+          
+       
+          
+  </ion-content>
+  

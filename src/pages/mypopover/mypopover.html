@@ -1,0 +1,56 @@
+<!--
+  Generated template for the MypopoverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+
+  
+
+   <!-- <ion-item class="active scroll-content" >
+    <ion-label  >Profile</ion-label>
+  </ion-item>
+  <ion-item class="active scroll-content">
+    <ion-label >Déconnexion</ion-label>
+  </ion-item>-->
+  <ion-content #popoverContent padding class="popover-page" style=" background-color: #337ab7">
+   
+      <img  [src]="chosenPicture || placeholder" style="   left :0;top: 0;height :50%; width :50%;
+      display: block;margin-left: auto;margin-right: auto ;  border: 1px solid rgb(109, 175, 236);
+      border-radius: 4px;
+      padding: 5px;
+      width: 150px;
+      " onerror="this.src='assets/imgs/logo4.png'"
+      />
+   
+  </ion-content>
+
+    
+    
+
+  <ion-footer>
+      <ion-toolbar >
+        
+          <button ion-button outline  clear (click)="profile()">
+            <ion-icon name="contact"  start></ion-icon>
+              <label style="font-size: 1.2rem">Profile</label>
+            </button>
+           
+        
+          <button ion-button outline  clear (click)="logout()" style="text-align: center">
+            <ion-icon name="log-out" start ></ion-icon>
+            <label style="font-size: 1.2rem">Déconnexion</label>
+             
+            </button>
+          
+           
+      </ion-toolbar>
+   
+    </ion-footer>
+   <!-- <button ion-button  small color="light">Profile</button>
+    <button ion-button small  color="light">Déconnexion</button>-->
+
+

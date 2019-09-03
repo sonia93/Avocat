@@ -1,0 +1,28 @@
+page-clientpage {
+ 
+    .info {background-color: white;} 
+    .info:hover {background-color: #ddd;}
+    
+    .btn{
+        background-color: #337ab7;
+         
+      }
+      .btn:hover {
+        background-color: #204d74;
+        border-color: #122b40;
+        color: white;
+      }
+     
+      .search{
+        background-color: #337ab7;
+      }
+      .item-md {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      .pages{
+    
+        font-size: large;
+       
+    }
+}

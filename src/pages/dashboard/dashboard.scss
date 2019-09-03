@@ -1,0 +1,167 @@
+page-dashboard {
+  [col-1] {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 8.33333%;
+    -ms-flex: 0 0 8.33333%;
+    flex: 0 0 14.285714285714286%;
+    width: 14.285714285714286%;
+    max-width: 14.285714285714286%;
+  }
+  .col {
+    text-align: center;
+    padding: 5px;
+  }
+  .last-month, .next-month {
+    color: #999999;
+    font-size: 90%;
+  }
+  .currentDate, .otherDate {
+    padding: 5px;
+  }
+  .currentDate {
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+  }
+  .calendar-header {
+    background-color: #1a732d;
+    color: #FFFFFF;
+  }
+  .event-bullet {
+    margin: 2px auto;
+    height: 5px;
+    width: 5px;
+    background-color: green;
+    border-radius: 30px;
+  }
+  .selected-date {
+    width: 20px;
+    height: 2px;
+    background-color: blue;
+  }
+  .unselected-date {
+    border: none;
+  }
+  .calendar-body {
+    .grid {
+      padding: 0;
+    }
+    .col:last-child {
+      border-right: none;
+    }
+    .calendar-weekday, .calendar-date {
+      text-align: center;
+      margin: 0;
+    }
+    .calendar-weekday {
+      font-weight: bold;
+      border-bottom: solid 1px #1a732d;
+      background-color: #26ab56;
+    }
+    .calendar-date {
+      border-top: solid 1px #1a732d;
+      border-bottom: solid 1px #1a732d;
+    }
+  }
+  /*
+  .scroll-content{
+    background-color: #f6f6f6;
+    padding: 6px;
+}*/
+
+.ion-icon {
+  display: inline-block;
+  font-size: 2.2em;
+  color: white;
+  }
+  .ion-icon1 {
+    display: inline-block;
+    font-size: 3.2em;
+    padding-left: 15px;
+    padding-top: 22px;
+    color: #00a65a !important  
+    }
+    .ion-icon2 {
+      display: inline-block;
+      font-size: 3.2em;
+      padding-left: 15px;
+      padding-top: 22px;
+      color: #39cccc !important;
+      }
+      .ion-icon3 {
+        display: inline-block;
+        font-size: 3.2em;
+        padding-left: 15px;
+        padding-top: 22px;
+        color: #dd4b39 !important ;
+        }
+        .ion-icon4 {
+          display: inline-block;
+          font-size: 3.2em;
+          padding-left: 15px;
+          padding-top: 22px;
+          color:#ff851b !important;
+          }
+          .ion-icon5{
+            display: inline-block;
+            font-size: 3.2em;
+            padding-left: 15px;
+            padding-top: 22px;
+            color:#00c0ef !important;
+            }
+            .ion-icon6{
+              display: inline-block;
+              font-size: 3.2em;
+              padding-left: 15px;
+              padding-top: 22px;
+              color:#0073b7 !important;
+              }
+.bg-yellow{
+background-color: #f39c12 !important;
+}
+.bg-orange{
+  background-color:#ff851b !important;
+ 
+}
+.bg-green{
+background-color: #00a65a !important;
+}
+.bg-bleu{
+  background-color:#00c0ef !important;
+  }
+
+
+  .ios, .md {
+ 
+    page-home {
+ 
+       
+ 
+        ion-card-header {
+            font-weight: bold;
+        }
+ 
+    }
+ 
+}
+.info {background-color: white;} 
+.info:hover {background-color: #ddd;}
+
+
+.btn{
+  background-color: #337ab7;
+   
+}
+.btn:hover {
+  background-color: #204d74;
+  border-color: #122b40;
+  color: white;
+}
+
+
+
+page-detail-contentieux .slide-zoom {
+  margin-top: 26em;
+}
+}

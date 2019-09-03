@@ -1,0 +1,95 @@
+<!--
+  Generated template for the DetailclientPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-header>
+
+  <ion-navbar color="primary">
+      <button menuToggle *ngIf="!selectedItem">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="selectedItem">
+  
+    
+        <h1 style="color: royalblue"></h1>
+            {{selectedItem.Nom}} {{selectedItem.Prenom}} 
+          
+          <ion-item>
+         <h2 style="color :rgb(26, 26, 27) ">Carte d'identité</h2>    <h2 style="color :royalblue "> {{selectedItem.Cin}}</h2> 
+       
+          </ion-item>
+        
+      
+          <ion-item>
+            <h2 style="color :rgb(26, 26, 27) ">Nom:</h2>
+              <h2 style="color :royalblue ">   {{selectedItem.Nom}}</h2>
+          </ion-item>
+      
+          <ion-item>
+            <h2 style="color :rgb(26, 26, 27) ">Prénom:</h2>
+              <h2 style="color :royalblue ">  {{selectedItem.Prenom}}</h2>
+            </ion-item>
+        
+            <ion-item>
+              <h2 style="color :rgb(26, 26, 27) ">Adresse:</h2>
+                <h2 style="color :royalblue ">  {{selectedItem.Adresse}}</h2>
+              </ion-item>
+              <ion-item>
+                <h2 style="color :rgb(26, 26, 27) ">ID:</h2>
+                  <h2 style="color :royalblue ">   {{selectedItem.ID}}</h2>
+              </ion-item>
+              <ion-item>
+                <h2 style="color :rgb(26, 26, 27) "> Code Postale:</h2>
+                  <h2 style="color :royalblue ">  {{selectedItem.CodePostal}}</h2>
+                </ion-item>
+
+                <ion-item>
+                  <h2 style="color :rgb(26, 26, 27) ">Email:</h2>
+                  <h2 style="color :royalblue ">  {{selectedItem.Email}}</h2>
+                </ion-item>
+
+                <ion-item>
+                  <h2 style="color :rgb(26, 26, 27) ">Date Naissance:</h2>
+                  <h2 style="color :royalblue ">  {{selectedItem.DateNaissance}}</h2>
+                  </ion-item>
+                  <ion-item>
+                    <h2 style="color :rgb(26, 26, 27) ">  Date de l'inscription:</h2>
+                      <h2 style="color :royalblue ">  {{selectedItem.DateInscription}}</h2>
+                    </ion-item>
+                    <ion-item>
+                      <h2 style="color :rgb(26, 26, 27) ">Téléphone Fixe:</h2>
+                        <h2 style="color :royalblue "> {{selectedItem.TelFixe}}</h2>
+                      </ion-item>
+                      <ion-item>
+                        <h2 style="color :rgb(26, 26, 27) ">Téléphone Mobile:</h2>
+                          <h2 style="color :royalblue ">   {{selectedItem.TelMobile}}</h2>
+                        </ion-item>
+                        <ion-item>
+                          <h2 style="color :rgb(26, 26, 27) ">Raison Sociale:</h2>
+                            <h2 style="color :royalblue ">   {{selectedItem.RaisonSocial}}</h2>
+                          </ion-item>
+                          <ion-item>
+                            <h2 style="color :rgb(26, 26, 27) ">Numéro Siret - ou équivalent:</h2>
+                            <h2 style="color :royalblue ">  {{selectedItem.NumSiret}}</h2>
+                            </ion-item>
+                            <ion-item>
+                              <h2 style="color :rgb(26, 26, 27) ">Numéro d'identification à la TVA:</h2>
+                                <h2 style="color :royalblue ">   {{selectedItem.NumTVA}}</h2>
+                              </ion-item>
+                              <ion-item>
+                                <h2 style="color :rgb(26, 26, 27) ">Interlocuteur:</h2>
+                                <h2 style="color :royalblue ">  {{selectedItem.Interlocuteur}}</h2>
+                                </ion-item>
+      
+        </ion-list>
+</ion-content>
+

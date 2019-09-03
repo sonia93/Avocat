@@ -1,0 +1,297 @@
+<!--
+  Generated template for the DetailContentieuxPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title >Contentieux</ion-title>
+            <button menuToggle *ngIf="!selectedItem">
+                    <ion-icon name="menu"></ion-icon>
+                  </button>
+    </ion-navbar>
+   
+    <ion-content #scroll scrollX="true" scrollY="false" style="height: 50px;">
+     
+       
+        <ion-segment  scrollX="true" class="SwipedTabs-tabs"  >
+               
+            <ion-segment-button  [class.seleceted]="ShowLine"  [class.Notseleceted]="!ShowLine"  *ngFor='let tab of tabs ; let i = index ' value="IngoreMe" (click)="selectTab(i)"
+            [ngClass]='{ "SwipedTabs-activeTab" : ( this.SwipedTabsSlider  && ( this.SwipedTabsSlider.getActiveIndex() === i || (  tabs.length -1 === i&& this.SwipedTabsSlider.isEnd()))) }'  [ngStyle]="{'width.px': (this.tabElementWidth_px)}" >
+              {{tab}}
+            </ion-segment-button>
+             
+          </ion-segment>  
+        <div id='indicator' [ngStyle]="{'width.%': (100/this.tabs.length)}"></div>
+    </ion-content>
+
+</ion-header>
+
+<ion-content>
+      
+    
+    <ion-slides style="margin-top:  2em !important  ; " class="slider-page " #SwipedTabsSlider (ionSlideDrag)="animateIndicator($event)"
+        (ionSlideWillChange)="updateIndicatorPosition()" (ionSlideDidChange)="updateIndicatorPosition()" (pan)="updateIndicatorPosition()"
+        [pager]="false">
+
+        <ion-slide  style="margin-top: -5em ;overflow-y: scroll ;" >
+
+                <!--      <ion-list style="margin-top: 0em;" *ngIf="selectedItem">
+                          <ion-item >
+                            <h2 style="color :rgb(26, 26, 27) ">Nom</h2>
+                              <h2 style="color :royalblue ">   {{selectedItem.CodeInterne}}</h2>
+                          </ion-item>
+                        </ion-list>
+                        sssssssssssssssss
+                          <button ion-button full class="btn">Valider</button>-->
+                      
+               
+           <div >
+              
+                    <ion-item style="margin-top: -5em;">
+                            <ion-icon name="barcode" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Honoraire </ion-label>
+                        <ion-input type="text" placeholder="{{Montant}}"></ion-input>
+                    </ion-item>
+                    <ion-item >
+                            <ion-icon name="barcode" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Code Interne</ion-label>
+                        <ion-input type="text" placeholder="{{CodeInterneg}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                            <ion-icon name="code" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Code Tribunal</ion-label>
+                        <ion-input type="text" placeholder="{{CodeTribunal}}"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                            <ion-icon name="ios-globe-outline" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Objet</ion-label>
+                        <ion-input type="text" placeholder="{{Sujet}}"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                            <ion-icon name="cog" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Objectif</ion-label>
+                        <ion-input type="text" placeholder="{{Objectifs}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                            <ion-icon name="bookmarks" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked> Contrat tierce partie</ion-label>
+                        <ion-input placeholder="{{NomAdversaire}}"></ion-input>
+                    </ion-item>
+               
+                    <ion-item>
+                            <ion-icon name="bookmarks" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>CIN de l'adversaire</ion-label>
+                        <ion-input placeholder="{{CinAdversaire}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                            <ion-icon name="calendar" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Date Contentieux</ion-label>
+                        <ion-input  placeholder="{{DateCas}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                            <ion-icon name="stats" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Statut </ion-label>
+                        <ion-input type="text" placeholder="{{Statut}}"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                            <ion-icon name="cash" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Charge (DT)</ion-label>
+                        <ion-input type="text" placeholder="{{Chargeg}}"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                            <ion-icon name="cash" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Pétition</ion-label>
+                        <ion-input type="text"  [innerHTML]=Petition></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-icon name="cash" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Énonciation</ion-label>
+                        <ion-input type="text" [innerHTML]=Ennonciation></ion-input>
+                    </ion-item>
+                    
+                
+            </div>
+
+
+        </ion-slide >
+        <ion-slide style="margin-top: -2em ;">
+                <div style=" margin-top: -24em;">
+          
+                    </div>
+                    <br>
+
+
+
+            <ion-item  >
+                    
+                <ion-label color="primary">Libellé</ion-label>
+                <ion-label color="primary">Fichier</ion-label>
+              
+            </ion-item>
+         <!--
+            <ion-item class="info"  (click)="detailJustificatifs()" *ngFor="let Myjustificatif of listdetailContentieuxatJsutificatif">
+                 
+                    
+                    
+                    <ion-label>{{Myjustificatif.Libelle}}</ion-label>
+                <ion-label>{{Myjustificatif.Fichier}}</ion-label>
+                
+                <button item-right style="background-color: transparent"  (click)="OpenJustificatif(Myjustificatif.Id,Myjustificatif.Justificatif)" > 
+                    <ion-icon name="eye"  style="color: green;background-color: transparent" ></ion-icon></button>
+                    
+               
+                </ion-item>
+            -->   
+
+            
+                                
+                                      
+                                              
+
+        </ion-slide>
+        <ion-slide style="margin-top: -19em ;">
+               
+            
+              
+                    <ion-label color="danger">Reste de paiement : {{ MontantTotal}}</ion-label>
+            
+            
+            <ion-item >
+                <ion-label color="primary">Titre</ion-label>
+                <ion-label color="primary">Honoraire</ion-label>
+               
+            </ion-item >
+            <ion-item class="info" (click)="detailPaiements(event,MyPaiement)"  *ngFor="let MyPaiement of listdetailContentieux" >
+                    
+                     <ion-label>{{MyPaiement.Description}}</ion-label>
+                <ion-label>{{MyPaiement.Montant}}</ion-label>
+              
+            </ion-item>
+           
+           
+              
+             
+        </ion-slide>
+        <ion-slide scrollX="false" style="margin-top: -2em  ;">
+                <div style=" margin-top: -24em;">
+                        
+                                </div>
+                                <br>
+            <ion-item    >
+                <!--<ion-label color="primary">Description </ion-label>
+              
+                <ion-label color="primary">Date Séance</ion-label>-->
+                <ion-label color="primary">Lieux</ion-label>
+                <ion-label color="primary">Libellé</ion-label>
+                
+            </ion-item>
+            <ion-item class="info"  (click)="detailSeances(event,MySeances)"   *ngFor="let MySeances of listdetailContentieuxSeances" >
+            
+                <!--<ion-label>{{MySeances.Description}}</ion-label>
+               <ion-label>{{MySeances.Libelle}}</ion-label>-->
+               <ion-label>{{MySeances.DateSeance}}</ion-label>
+               <ion-label>{{MySeances.Lieux}}</ion-label>
+             
+           </ion-item>
+        </ion-slide>
+        <ion-slide style="margin-top: -2em ;">
+
+                <div style=" margin-top: -24em;">
+                        
+                                </div>
+                                <br>
+            <ion-item >
+                <ion-label color="primary">Libellé</ion-label>
+                <ion-label color="primary" style="padding-left: 8px;">Fichier</ion-label>
+                <ion-label color="primary" style="margin-right: -67px;">Voir</ion-label>
+            </ion-item>
+            
+               
+              
+              
+               
+               <ion-item  class="info" *ngFor="let MyRapport of listdetailContentieuxReport">
+                <ion-label>{{MyRapport.Libelle}}</ion-label>
+                <ion-label>{{MyRapport.Fichier}}</ion-label>
+                <button item-right  style="background-color: transparent"  (click)="OpenReport(MyRapport.Id,MyRapport.Fichier)" > 
+                    <ion-icon style="color: green;background-color: transparent"   name="eye"  ></ion-icon></button>
+                    
+               </ion-item>
+              
+             
+
+        </ion-slide>
+        <ion-slide style="margin-top: -2em ;">
+                <div style=" margin-top: -24em;">
+                        
+                                </div>
+                                <br>
+            <ion-item>
+            <ion-label color="danger"> Reste du charge : </ion-label>
+            <ion-label color="primary"> {{ChargeValue}}</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Honoraire</ion-label>
+                <ion-label color="primary">Date de la charge</ion-label>
+              
+            </ion-item >
+            <ion-item class="info" *ngFor="let MyCharges of listdetailContentieuxCharge">
+                <ion-label>{{MyCharges.Montant}}</ion-label>
+                <ion-label>{{MyCharges.DateCharge}}</ion-label>
+                </ion-item>
+                
+                                   
+                                        
+        </ion-slide>
+        <ion-slide style="margin-top: -2em ;">
+                <div style=" margin-top: -24em;">
+                      
+                                </div>
+                                <br>
+            <ion-item >
+                <ion-label color="primary">Nom</ion-label>
+                <ion-label color="primary">Fichier</ion-label>
+                <ion-label color="primary" style="margin-right: -67px;">Voir</ion-label>
+               
+            </ion-item>
+
+        
+            <ion-item class="info" *ngFor="let MyFiles of listdetailContentieuxFiles" >
+                <ion-label>{{MyFiles.Nom}}</ion-label>
+                <ion-label>{{MyFiles.NomFichier}}</ion-label>
+                <button item-right style="background-color: transparent"  (click)="OpenFile(MyFiles.Id,MyFiles.NomFichier)" > 
+                    <ion-icon name="eye" style="color: green;background-color: transparent"  ></ion-icon></button>
+
+              </ion-item>
+              
+           
+        </ion-slide>
+        <ion-slide style="margin-top: -2em ;">
+                <div style=" margin-top: -24em;">
+                      
+                                </div>
+                                <br>
+            <ion-item >
+                <ion-label color="primary">Date de l'événement </ion-label>
+                <ion-label color="primary">Lieux</ion-label>
+
+            </ion-item>
+            
+            <ion-item class="info" *ngFor="let MyEvents of listdetailContentieuxEvents" >
+                <ion-label>{{MyEvents.Lieux}}</ion-label>
+                <ion-label>{{MyEvents.DateEvenement}}</ion-label>
+         </ion-item>
+        
+        </ion-slide>
+
+    </ion-slides>
+
+</ion-content>

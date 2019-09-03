@@ -1,0 +1,101 @@
+<!--
+  Generated template for the EtatPaiementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color= "primary"> 
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle="left">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+        <button ion-button icon-right>
+            <ion-icon name="notifications"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-buttons end>
+          <button ion-button icon-right>
+              <ion-icon name="flag"></ion-icon>
+            </button>
+          </ion-buttons>
+         
+          <ion-buttons  right >
+              <button ion-button (click)="presentPopover($event)" >
+                <ion-icon name="more"></ion-icon>
+              </button>
+            </ion-buttons>
+  <ion-content>
+      
+    </ion-content>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding class="scroll-content">
+ 
+    <ion-list>
+      <ion-item>
+          <ion-label  color="primary" stacked> Nom</ion-label>
+      <ion-select>
+         <ion-option selected="">Tous</ion-option>
+          <ion-option>Mrissa sonia</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item >
+        <ion-label  color="primary" stacked>Date début</ion-label>
+         <ion-input type="date"></ion-input>
+      </ion-item>
+      <ion-item >
+          <ion-label  color="primary" stacked>Date fin</ion-label>
+           <ion-input type="date"></ion-input>
+        </ion-item>
+     <br>
+  
+       
+<ion-checkbox [(ngModel)]="active"></ion-checkbox>  Toutes les dates
+<br>
+<br>
+    <button ion-button class="btn" full> Rechercher</button>
+    <br>
+    <ion-item >
+      <ion-label  color="primary" >Nom du client</ion-label>
+      <ion-label  color="primary" >Encaissé </ion-label>
+    </ion-item>
+    <ion-item class="info" (click)=" detailetatpaiement()" >
+      <ion-label   >Khouaja Marwen</ion-label>
+      <ion-label  >0 DT </ion-label>
+    </ion-item>
+
+    <ion-item class="info">
+      <ion-label   >Nom du client</ion-label>
+      <ion-label  >Encaissé </ion-label>
+    </ion-item>
+
+    <ion-item class="info" >
+      <ion-label   >Nom du client</ion-label>
+      <ion-label  >Encaissé </ion-label>
+    </ion-item>
+
+    <ion-item class="info">
+      <ion-label   >Nom du client</ion-label>
+      <ion-label  >Encaissé </ion-label>
+    </ion-item>
+
+    <ion-item class="info">
+      <ion-label   >Nom du client</ion-label>
+      <ion-label  >Encaissé </ion-label>
+    </ion-item>
+
+    <ion-item class="info" >
+      <ion-label   >Nom du client</ion-label>
+      <ion-label  >Encaissé </ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>
+<!--<ion-footer>
+    <button ion-button full class="btn" (click)="close()">Fermer
+    </button>
+  </ion-footer>-->

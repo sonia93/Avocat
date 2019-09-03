@@ -1,0 +1,199 @@
+<!--
+  Generated template for the ClientpagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!--
+<ion-header>
+    <ion-navbar>
+      <ion-buttons left>
+        <button ion-button icon-only menuToggle="left">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      
+      
+    <ion-content>
+        
+      </ion-content>
+  </ion-navbar>
+  </ion-header>
+  
+   
+  <ion-content padding>
+    <ion-list style="overflow-y: scroll"no-lines>  
+   <div>Editer Client</div>
+   
+  <ion-item>
+    <ion-input type="text" placeholder="Carte d'identité"></ion-input>
+    </ion-item>
+  <ion-item>
+        <ion-input type="text" placeholder="Nom"></ion-input>
+        </ion-item>
+    <ion-item>
+        <ion-input type="text" placeholder="Prénom"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input type="text" placeholder="Adresse"></ion-input>
+          </ion-item>
+        <ion-item>
+              <ion-input type="text" placeholder="Ville"></ion-input>
+              </ion-item>
+          <ion-item>
+              <ion-input type="text" placeholder="Code Postale"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input type="text" placeholder="Email"></ion-input>
+                </ion-item>
+              <ion-item>
+                <p>Date Naissance</p>
+                    <input type="date">
+                    </ion-item>
+                <ion-item>
+                  <p>Date de l'inscription</p>
+                    <input type="date">
+                    </ion-item>
+                    <ion-item>
+                      
+                      <ion-input type="text" placeholder="Téléphone Fixe"></ion-input>
+                      </ion-item>
+                    <ion-item>
+                          <ion-input type="text" placeholder="Téléphone Mobile"></ion-input>
+                          </ion-item>
+                      <ion-item>
+                          <ion-input type="text" placeholder="Raison Sociale"></ion-input>
+                          </ion-item>
+                          <ion-item>
+                            <ion-input type="text" placeholder="Numéro Siret - ou équivalent"></ion-input>
+                            </ion-item>
+                          <ion-item>
+                                <ion-input type="text" placeholder="Numéro d'identification à la TVA"></ion-input>
+                                </ion-item>
+                            <ion-item>
+                                <ion-input type="text" placeholder="Interlocuteur"></ion-input>
+                                </ion-item>
+    
+                                <div><button ion-button>Valider</button></div>  
+      
+    
+      </ion-list>
+  </ion-content>-->
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{selectedItem.Nom}} {{selectedItem.Prenom}} </ion-title>
+      <button menuToggle *ngIf="!selectedItem">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="selectedItem">
+            <ion-item>
+            <ion-icon name="bookmarks" item-start color="primary"></ion-icon>
+            <ion-label color="primary" stacked>Carte d'identité</ion-label>
+            <ion-input type="text"  placeholder="{{selectedItem.Cin}}"></ion-input>
+          </ion-item>
+        
+      
+          <ion-item>
+              <ion-icon name="person" item-start color="primary"></ion-icon>
+            <ion-label color="primary" stacked>Nom</ion-label>
+            <ion-input type="text" placeholder="{{selectedItem.Nom}}" ></ion-input>
+          </ion-item>
+      
+          <ion-item>
+              <ion-icon name="person" item-start color="primary"></ion-icon>
+              <ion-label color="primary" stacked>Prénom</ion-label>
+              <ion-input type="text"  placeholder="{{selectedItem.Prenom}}"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                <ion-icon name="pin"  item-start color="primary"></ion-icon>
+                <ion-label color="primary"stacked>Adresse</ion-label>
+                <ion-input type="text" placeholder="{{selectedItem.Adresse}}" ></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-icon name="information-circle" item-start color="primary"></ion-icon>
+                <ion-label color="primary" stacked>ID</ion-label>
+                <ion-input type="text" placeholder="{{selectedItem.ID}}" ></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-icon name="barcode" item-start color="primary"></ion-icon>
+                  <ion-label color="primary" stacked>Code Postale</ion-label>
+                  <ion-input type="text" placeholder="{{selectedItem.CodePostal}}" ></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-icon name="mail"  item-start color="primary"></ion-icon>
+                    <ion-label color="primary" stacked>Email</ion-label>
+                    <ion-input type="text" placeholder="{{selectedItem.Email}}" ></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-icon name="calendar" item-start color="primary"></ion-icon>
+                    <ion-label color="primary" stacked>Date Naissance</ion-label>
+                    <ion-input type="date"  placeholder="{{selectedItem.DateNaissance}}"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-icon name="calendar" item-start color="primary"></ion-icon>
+                      <ion-label color="primary" stacked>Date de l'inscription</ion-label>
+                      <ion-input type="date"  placeholder="{{selectedItem.DateInscription}}"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-icon name="call" item-start color="primary"></ion-icon>
+                        <ion-label color="primary" stacked>Téléphone Fixe</ion-label>
+                        <ion-input type="text" placeholder="{{selectedItem.TelFixe}}" ></ion-input>
+                      </ion-item>
+
+                      <ion-item>
+                          <ion-icon name="call" item-start color="primary"></ion-icon>
+                          <ion-label color="primary" stacked>Téléphone Mobile</ion-label>
+                          <ion-input type="text"  placeholder="{{selectedItem.TelMobile}}" ></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-icon name="cart" item-start color="primary"></ion-icon>
+                            <ion-label color="primary" stacked>Raison Sociale</ion-label>
+                            <ion-input type="text"  placeholder="{{selectedItem.RaisonSocial}}"></ion-input>
+                          </ion-item>
+
+                          <ion-item>
+                              <ion-icon name="infinite" item-start color="primary"></ion-icon>
+                              <ion-label color="primary" stacked>Numéro Siret - ou équivalent</ion-label>
+                              <ion-input type="text" placeholder="{{selectedItem.NumSiret}}" ></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-icon name="infinite" item-start color="primary"></ion-icon>
+                                <ion-label color="primary" stacked>Numéro d'identification à la TVA</ion-label>
+                                <ion-input type="text" placeholder="{{selectedItem.NumTVA}}"></ion-input>
+                              </ion-item>
+
+                              <ion-item>
+                                  <ion-icon name="mic" item-start color="primary"></ion-icon>
+                                  <ion-label color="primary" stacked>Interlocuteur</ion-label>
+                                  <ion-input type="text"    placeholder="{{selectedItem.Interlocuteur}}"></ion-input>
+                                </ion-item>
+      
+        </ion-list>
+          
+        <button ion-button full class="btn" >Valider </button>
+        
+</ion-content>
+<!--
+<ion-footer>
+
+</ion-footer>-->
+
+  

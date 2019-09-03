@@ -1,0 +1,81 @@
+<!--
+  Generated template for the ClientpagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title style="text-align: center">Client</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle="left">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+        <button ion-button icon-right>
+            <ion-icon name="notifications"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-buttons end>
+         
+          </ion-buttons>
+          <ion-buttons end>
+            <button ion-button icon-right [navPush]="ajout">
+                <ion-icon name="add"></ion-icon>
+              </button>
+            </ion-buttons>
+           
+          <ion-buttons  right >
+              <button ion-button (click)="presentPopover($event)" >
+                <ion-icon name="more"></ion-icon>
+              </button>
+            </ion-buttons>
+    
+</ion-navbar>
+
+<ion-searchbar class="search" placeholder="Rechercher" [(ngModel)]="terms"></ion-searchbar>
+</ion-header>
+
+ 
+<ion-content padding class="scroll-content" style="margin-top: -10px;" >
+ 
+
+
+
+    <ion-list>
+      <ion-item-sliding   #slidingItem *ngFor="let myclient of WSClient  | search : terms  ; let index = index">
+     <ion-item ion-item   (click)="EditClient(event,myclient)">
+      
+        <button ion-button outline item-end icon-left clear>
+          <ion-icon right name="arrow-dropright" style="color:midnightblue"></ion-icon>
+        </button>
+
+            <ion-icon  style="color:midnightblue" name="contact" item-start  ></ion-icon>
+          <h2>{{myclient.Nom}} {{myclient.Prenom}} </h2>
+          
+      
+        
+       
+          <h2>{{myclient.Adresse}}</h2>
+          
+      </ion-item>
+
+      <ion-item-options side="right"  clear >
+          <button ion-button color="primary" (click)="EditClient(event,myclient)">
+            <ion-icon name="create"></ion-icon>
+       <!--  editer -->
+          </button>
+          <button ion-button color="danger" expandable 
+          (click)="delete(myclient)">
+              <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-item-options>
+   
+    </ion-item-sliding>
+                            
+</ion-list>
+  
+ 
+               
+</ion-content>

@@ -1,0 +1,94 @@
+page-menu {
+    ion-content .scroll-content {
+        overflow : hidden !important;
+    }
+
+    ion-scroll p {
+        width: 5000px;
+        font-size: 60px;
+        height: 100px;
+        white-space: nowrap;
+        padding: 10px;
+        line-height: 100px;
+      }
+      .card-background-page {
+
+        ion-card {
+          position: relative;
+          text-align: center;
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 36%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+}
+
+.titre{
+  color: #028fcc;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.titre1{
+  font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    text-align: center;
+    line-height: 31px;
+    margin-top: 150px;
+    background-color: rgba(2, 143, 204, 0.5);
+}
+.titre2{
+  font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    text-align: center;
+    line-height: 31px;
+    margin-top: 14px;
+    background-color: rgba(2, 143, 204, 0.5);
+}
+}
+/*
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  background-color: #002a3e;
+}
+
+.flb {
+  background-color: #3ebffb;
+  height:100%;
+  width:100%;
+  animation: pulse 1s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aligner-item {
+  max-width: 50%;
+}
+.Aligner-item--top {
+  align-self: flex-start;
+}
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+#custom-overlay img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  animation: animation 3100ms linear infinite both;
+  animation-delay: 1s;
+}*/

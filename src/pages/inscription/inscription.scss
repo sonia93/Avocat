@@ -1,0 +1,38 @@
+page-inscription {
+ .backg{
+    background-image: url('../assets/imgs/background.jpg');
+     background-size: cover;
+     background-color :black;
+     position :absolute;
+     left :0;top: 0;height :100%; width :100%;
+ } 
+ .titre1{
+    font-weight: 600;
+      color: hsl(0, 0%, 100%);
+      font-size: 22px;
+      text-align: center;
+      line-height: 31px;
+      margin-top: 1px;
+      background-color: rgba(0, 0, 0, 0.5);
+  } 
+
+  .titre2{
+   
+      color: hsl(0, 0%, 100%);
+      font-size: 14px;
+      text-align: center;
+      line-height: 31px;
+     
+      
+      background-color: rgba(0, 0, 0, 0.5);
+  } 
+  .btn{
+    background-color: #337ab7;
+     
+  }
+  .btn:hover {
+    background-color: #204d74;
+    border-color: #122b40;
+    color: white;
+  } 
+}

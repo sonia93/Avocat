@@ -1,0 +1,73 @@
+<!--
+  Generated template for the ChargesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+   
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    
+        <h3 style=" text-align: center;">Modification de charge </h3>
+      
+            <ion-item>
+                <ion-label color="primary" stacked>Catégorie de charge</ion-label>
+                <ion-select>
+                    <ion-option value="0" selected="true">charges décaissables</ion-option>
+                    <ion-option value="1" > Les charges non décaissables</ion-option>
+                   
+                </ion-select>
+                </ion-item>
+           
+        <ion-item>
+        <ion-label color="primary" stacked>Description</ion-label>
+        <ion-input type="text" placeholder="titre1"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label color="primary" stacked>Honoraire(DT)</ion-label>
+            <ion-input type="text" placeholder="1238"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                <ion-label color="primary" stacked>Date de la charge </ion-label>
+                <ion-input type="date" ></ion-input>
+                </ion-item>
+                
+               
+                   
+                       
+                        <ion-item>
+                            <ion-label color="primary" stacked>État</ion-label>
+                        
+                        <ion-select>
+                            <ion-option selected="true">Non Payé</ion-option>
+                            <ion-option> Payé</ion-option>
+                            </ion-select>
+                        </ion-item>
+                 
+                           
+                       
+                            <ion-item>
+                                <ion-label color="primary" stacked>Fichier</ion-label>
+                             
+                                </ion-item>
+                               
+                            
+</ion-content>
+<ion-footer>
+    <ion-toolbar> 
+            <div  color="primary" class="btn-wrapper">  
+                    <button ion-button icon-only clear><ion-icon name="checkmark-circle"></ion-icon></button>
+                    <button ion-button icon-only float-start clear>  <ion-icon name="trash"></ion-icon></button>
+                    <button ion-button icon-only float-end clear   (click)="close()"><ion-icon name="close"></ion-icon></button>
+                    </div>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,62 @@
+<!--
+  Generated template for the SeancescontratPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+   
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3 style=" text-align: center;">Modification de séance</h3>
+    
+ 
+      <ion-item>
+          <ion-label color="primary" stacked>Libellé</ion-label>
+          <ion-input type="text" ></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary" stacked>Description</ion-label>
+              <ion-input type="text" ></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label color="primary" stacked>Date de la séance</ion-label>
+                  <ion-input type="date" ></ion-input>
+                  </ion-item>
+     
+          <ion-item>
+              <ion-label color="primary" stacked>Durée </ion-label>
+              <ion-select>
+                  <ion-option value="0" selected="true">15 minutes</ion-option>
+                  <ion-option value="1" > 30 minutes</ion-option>
+                  <ion-option value="2" >45 minutes </ion-option>
+                  <ion-option value="3" > 1 heure</ion-option>
+                  <ion-option value="4" >1 heure 15 minutes</ion-option>
+                  <ion-option value="5" > 1 heure 30 minutes</ion-option>
+                  <ion-option value="6" > 1 heure 45 minutes</ion-option>
+                  <ion-option value="7" > 2 heures</ion-option>
+              </ion-select>
+              </ion-item>
+         
+          <ion-item>
+              <ion-label color="primary" stacked>Lieux</ion-label>
+              <ion-input type="text" ></ion-input>
+              </ion-item>
+             
+          
+</ion-content>
+<ion-footer>
+    <ion-toolbar> 
+            <div  color="primary" class="btn-wrapper">  
+                    <button ion-button icon-only clear><ion-icon name="checkmark-circle"></ion-icon></button>
+                    <button ion-button icon-only float-start clear>  <ion-icon name="trash"></ion-icon></button>
+                    <button ion-button icon-only float-end clear   (click)="close()"><ion-icon name="close"></ion-icon></button>
+                    </div>
+    </ion-toolbar>
+  </ion-footer>

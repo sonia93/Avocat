@@ -1,0 +1,84 @@
+page-login,
+{
+.bg-images{
+   // background-image:url('../assets/imgs/Login.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+/*
+.bg-imag{
+   
+     background-repeat: no-repeat;
+     background-position: center;
+     width: 100%;
+     height: 100%;
+   
+ }*/
+ .log{
+    width: 80%;
+    height: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+ }
+ 
+/*.scroll-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }*/
+  .scroll-content {
+    left: 0;
+    right: 0;
+    top: 15;
+    bottom: 15;
+  }
+  .content{
+
+  }
+  ion-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #eee;
+    contain: strict;
+    width: 164px;
+    height: 92px;
+    margin-top: 80px;
+}
+.btn{
+  background-color: rgb(67, 216, 186); 
+   
+}
+.btn:hover {
+  background-color : rgb(26, 179, 148); 
+
+  color: white;
+}
+
+.btn1{
+  background-color: rgb(189, 188, 188);
+   
+}
+.btn1:hover {
+  background-color:#ececeb ;
+
+  color: #666;
+}
+p{
+  text-align: center;
+  
+}
+
+.titre1{
+  font-weight: 600;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    text-align: center;
+    line-height: 31px;
+    margin-top: 14px;
+    background-color: rgba(2, 143, 204, 0.5);
+}
+}

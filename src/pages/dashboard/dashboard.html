@@ -1,0 +1,189 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle="left">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+  
+
+    <ion-buttons end>
+      <button ion-button icon-right (click)="notification()">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-buttons end>
+        
+        </ion-buttons>
+       
+        <ion-buttons  end >
+            <button ion-button  (click)="presentPopover($event)" >
+              <ion-icon name="more"></ion-icon>
+            </button>
+          </ion-buttons>
+  
+</ion-navbar>
+</ion-header>
+
+<ion-content class="scroll-content"padding >
+ 
+<h1>Dashboard</h1>
+<ion-item >
+  <ion-label   color="primary" stacked>Date début</ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime> 
+ <!-- <ion-input type="date"></ion-input>-->
+</ion-item>
+<ion-item>
+  <ion-label  color="primary"  stacked>Date fin</ion-label>
+  <ion-datetime displayFormat="DD/MM/YYYY" maxDate="23/05/2018"  (initialValue)="someDateFunction()" [(ngModel)]="myDate"></ion-datetime> 
+
+</ion-item>
+<br>
+<ion-checkbox [(ngModel)]="active"></ion-checkbox> Toutes les dates
+<br>
+<br>
+<button ion-button class="btn" full>Rechercher</button>
+<br><bR>
+<ion-list>
+    <ion-item>
+      <ion-thumbnail color="primary" item-start>
+          <ion-icon  class="ion-icon1" name="cash" icon-left></ion-icon>
+    <!--    <img src="../assets/imgs/i1.PNG">-->
+      </ion-thumbnail>
+      <p>Recette Réelle    </p>
+     <h2  style="font-size: 13px;">0 DT</h2>
+      </ion-item>
+      <ion-item>
+          <ion-thumbnail item-start>
+              <ion-icon  class="ion-icon2" name="cash" icon-left></ion-icon>
+            <!--<img src="../assets/imgs/i3.PNG">-->
+          </ion-thumbnail>
+          <p style="font-size: 1.2rem;">RECETTE THÉORIQUE</p>
+          <h2  style="font-size: 13px;">0 DT</h2>
+          </ion-item>
+          <ion-item>
+              <ion-thumbnail item-start>
+                  <ion-icon  class="ion-icon3" name="book" icon-left></ion-icon>
+            <!--    <img src="../assets/imgs/i2.PNG">-->
+              </ion-thumbnail>
+              <p style="font-size: 1.2rem;">CHARGE </p>
+              <h2  style="font-size: 13px;">0 DT</h2>
+              </ion-item>
+              <ion-item>
+                  <ion-thumbnail item-start>
+                      <ion-icon  class="ion-icon4" name="time" icon-left></ion-icon>
+                  <!--  <img src="../assets/imgs/i4.PNG">-->
+                  </ion-thumbnail>
+                  <p style="font-size: 1.2rem;"> EVÈNEMENTS À VENIR </p>
+                  <h5  style="font-size: 13px;">0 DT</h5>
+                  </ion-item>
+                  <ion-item>
+                      <ion-thumbnail item-start>
+                          <ion-icon  class="ion-icon5" name="contact" icon-left></ion-icon>
+                      <!--  <img src="../assets/imgs/i5.PNG">-->
+                      </ion-thumbnail>
+                      <p style="font-size: 1.2rem;"> CRÉDIT CLIENT </p>
+                      <h2  style="font-size: 13px;">0 DT</h2>
+                      </ion-item>
+                      <ion-item>
+                          <ion-thumbnail item-start>
+                              <ion-icon  class="ion-icon6" name="people" icon-left></ion-icon>
+                          <!--  <img src="../assets/imgs/i6.PNG">-->
+                          </ion-thumbnail>
+                          <p style="font-size: 1.2rem;">NOMBRE DE CLIENTS </p>
+                          <h2  style="font-size: 13px;">0 DT</h2>
+                          </ion-item>
+      </ion-list>
+<p>Statistiques </p>
+  
+  
+  <ion-item class="bg-yellow">
+      <div  item-start >
+         <div style=" color: white;font-size: 12px;">Initiés</div>	  	  	  	  	  	    
+        <ion-icon class="ion-icon" name="time" icon-left></ion-icon>
+       
+     </div>
+     <div style=" color: white; text-overflow: ellipsis ; padding-left: 38px;
+     padding-bottom: 28px;   font-size: 14px;" >  Contentieux   0 </div>
+    </ion-item>
+<br>
+      <ion-item class="bg-orange">
+          <div  item-start >
+             <div style="color: white;font-size: 12px;">En cours</div>	  	  	  	  	  	    
+            <ion-icon class="ion-icon"  name="refresh" icon-left></ion-icon>
+           
+         </div>
+         <div style=" color: white; text-overflow: ellipsis ; padding-left: 38px;
+         padding-bottom: 28px;   font-size: 14px;" >  Contentieux   0 </div>
+        </ion-item>
+<br>
+        <ion-item class="bg-green">
+            <div  item-start >
+               <div style=" color: white;font-size: 12px;">Finis</div>	  	  	  	  	  	    
+              <ion-icon class="ion-icon"  name="checkmark" icon-left></ion-icon>
+             
+           </div>
+           <div style=" color: white; text-overflow: ellipsis ; padding-left: 38px;
+           padding-bottom: 28px;   font-size: 14px;" >  Contentieux   0 </div>
+          </ion-item>
+<br>
+          <ion-item class="bg-bleu">
+              <div  item-start >
+                 <div style=" color: white;font-size: 12px;">Clôturés</div>	  	  	  	  	  	    
+                <ion-icon class="ion-icon" name="checkbox-outline" icon-left></ion-icon>
+               
+             </div>
+             <div style=" color: white; text-overflow: ellipsis ; padding-left: 38px;
+             padding-bottom: 28px;   font-size: 14px;" >  Contentieux   0 </div>
+            </ion-item>
+               <br>
+               <div id="container" style="display: block;"	></div>
+               <br>
+            <ion-item>
+              Liste des évènements à venir
+            </ion-item>
+            <ion-item>
+              <ion-label   color="primary" >Code Interne</ion-label>
+              <ion-label   color="primary" >Nom du client</ion-label>
+            </ion-item>
+            <ion-item class="info" (click)="Listevenementsvenir()">
+              <ion-label   >0101</ion-label>
+              <ion-label   >Mrissa Sonia</ion-label>
+            </ion-item>
+            <ion-item class="info" (click)="Listevenementsvenir()">
+              <ion-label   >0102 </ion-label>
+              <ion-label   >Nom du client</ion-label>
+            </ion-item>
+            <ion-item class="info" (click)="Listevenementsvenir()">
+              <ion-label   >0103</ion-label>
+              <ion-label   >Nom du client</ion-label>
+            </ion-item>
+            <ion-item class="info" (click)="Listevenementsvenir()">
+              <ion-label   >0104 </ion-label>
+              <ion-label   >Nom du client</ion-label>
+            </ion-item>
+            <ion-item class="info" (click)="Listevenementsvenir()"> 
+              <ion-label   >0105 </ion-label>
+              <ion-label   >Nom du client</ion-label>
+            </ion-item>
+            <ion-item class="info" (click)="Listevenementsvenir()">
+              <ion-label   >0106</ion-label>
+              <ion-label   >Nom du client</ion-label>
+            </ion-item>
+            <ion-item class="info"(click)="Listevenementsvenir()">
+              <ion-label   >0107 </ion-label>
+              <ion-label   >Nom du client</ion-label>
+            </ion-item>
+            <ion-item class="info"(click)="Listevenementsvenir()">
+              <ion-label   >0108 </ion-label>
+              <ion-label   >Nom du client</ion-label>
+            </ion-item>
+
+</ion-content>

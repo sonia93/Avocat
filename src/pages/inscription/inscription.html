@@ -1,0 +1,77 @@
+<!--
+  Generated template for the InscriptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-image: url('./assets/imgs/background.jpg'); background-size: cover;background-color :black;position :absolute;left :0;top: 0;height :100%; width :100%;">
+ 
+<p style="text-align:center;" class="titre1">
+    Boostez votre cabinet
+     avec le logiciel AVOCANET
+</p>
+    <br>
+ 
+
+    <form (submit)="doSignup()">
+
+  <ion-item>
+    <ion-label color="primary" floating round>Nom </ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+<br>
+  <ion-item>
+    <ion-label color="primary" floating>Prénom </ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+<br>
+  <ion-item>
+    <ion-label color="primary" floating>Numéro de téléphone </ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+<br>
+  <ion-item>
+    <ion-label color="primary" [(ngModel)]="regData.email" name="email" floating>Email </ion-label>
+    <ion-input type="email" required></ion-input>
+  </ion-item>
+<br>
+  <ion-item>
+    <ion-label color="primary" floating>Ville </ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+  <br>
+  <ion-buttons style=" text-align: center;">
+    <button ion-button  class="btn" block type="submit"> Valider </button>
+  </ion-buttons>
+</form>
+
+<div     class="titre2"> Gestion des Clients
+
+  </div>
+  <br>
+  <div class="titre2"> Gestion des Contentieux
+
+    </div>
+    <br>
+    <div class="titre2"> Gestion des Fichiers
+
+      </div>
+      <br>
+      <div class="titre2"> Gestion des Paiements
+
+        </div>
+        <br>
+        <div class="titre2"> Gestion des Calendrier
+
+          </div>
+
+</ion-content>
