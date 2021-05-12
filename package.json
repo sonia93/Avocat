@@ -43,7 +43,7 @@
     "@ngx-translate/http-loader": "^0.1.0",
     "angular-calendar": "^0.23.7",
     "angular-calendar-week-hours-view": "0.0.2",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "cordova-android": "6.4.0",
     "cordova-android-support-gradle-release": "^1.4.4",
     "cordova-plugin-app-event": "^1.2.1",
